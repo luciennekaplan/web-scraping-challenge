@@ -30,19 +30,24 @@ def scrape():
     featured_image_url= url + relative_image_path
     browser.quit()
 
+    browser = init_browser()
     url = "https://space-facts.com/mars/"
+    browser.visit(url)
+    time.sleep(1)
     df_list = pd.read_html(url)
     df = df_list[0]
     table_html = df.to_html(index = False, escape = True)
-    mars_table = table_html.replace("\n", "")    
+    mars_table = table_html.replace("\n", "")   
+    browser.quit() 
 
-    browser = init_browser()
+   
     hemisphere_image_urls = []
     urls = ["https://astrogeology.usgs.gov/search/map/Mars/Viking/cerberus_enhanced", 
         "https://astrogeology.usgs.gov/search/map/Mars/Viking/schiaparelli_enhanced",
         "https://astrogeology.usgs.gov/search/map/Mars/Viking/syrtis_major_enhanced",
         "https://astrogeology.usgs.gov/search/map/Mars/Viking/valles_marineris_enhanced"]
     for url in urls:
+        browser = init_browser()
         url = url
         browser.visit(url)
         time.sleep(1)
@@ -55,9 +60,5 @@ def scrape():
         dictionary["img_url"].append(img_url)
         hemisphere_image_urls.append(dictionary)
         browser.quit()
-    mars_data : {
-    "news_title" : news_title,
-    "news_p" : news_p,
-    "featured_image_url" : featured_img_url,
-    "mars_table" : mars_table,
-    "hemisphere_image_urls" : hemisphere_image_urls}
+    mars_data = { "news_title" : news_title, "news_p" : news_p, "featured_image_url" : featured_image_url, "mars_table" : mars_table, "hemisphere_image_urls" : hemisphere_image_urls}
+  
