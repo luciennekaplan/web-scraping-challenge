@@ -65,4 +65,3 @@ def scrape():
     "hemisphere_image_urls" : hemisphere_image_urls}
 
     return mars_data
-  
