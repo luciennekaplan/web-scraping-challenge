@@ -23,11 +23,13 @@ def scrape():
     browser = init_browser()
     url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
     browser.visit(url)
+    browser.click_link_by_partial_text('FULL IMAGE')
+    browser.click_link_by_partial_text('more info')
     time.sleep(1)
     html = browser.html
     soup = bs(html, "html.parser")
-    relative_image_path = soup.find_all('a', class_='button fancybox')[0]["data-fancybox-href"]
-    featured_image_url= url + relative_image_path
+    relative_image_path = soup.find_all("img", class_="main_image")[0]["src"]
+    featured_image_url= "https://www.jpl.nasa.gov" + relative_image_path
     browser.quit()
 
     browser = init_browser()
