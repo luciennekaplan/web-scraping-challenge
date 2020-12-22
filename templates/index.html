@@ -6,10 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mission To Mars</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel ="stylesheet" href="style.css">
 </head>
-
-{{mars.featured_image_url}}
 
 <body>
   <div class="container-fluid">
@@ -31,7 +28,7 @@
   <div class = "row">
     <div class = "col-md-6 col-sm-12">
       <h2>Featured Mars Image</h2>
-      <img src= "{{mars.featured_image_url}}" alt="Featured Mars Image" class = "thumbnail">
+      <img src= "{{mars.featured_image_url}}" alt="Featured Mars Image" class = "img-fluid thumbnail" width = "200px" height= "auto">
     </div>
     <div class = "col-md-6 col-sm-12">
       <table class= "table">
@@ -49,19 +46,19 @@
   
   <div class = "row">
     <div class = "col-md-6 col-sm-12">
-      <img src= "{{mars.hemisphere_image_urls[0]['img_url'][0]}}" class = "thumbnail">
+      <img src= "{{mars.hemisphere_image_urls[0]['img_url'][0]}}" class = "img-fluid thumbnail">
     </div>
     <div class = "col-md-6 col-sm-12">
-      <img src= "{{mars.hemisphere_image_urls[1]['img_url'][0]}}" class = "thumbnail">
+      <img src= "{{mars.hemisphere_image_urls[1]['img_url'][0]}}" class = "img-fluid thumbnail">
     </div>
   </div>
 
   <div class = "row">
     <div class = "col-md-6 col-sm-12">
-      <img src= "{{mars.hemisphere_image_urls[2]['img_url'][0]}}" class = "thumbnail">
+      <img src= "{{mars.hemisphere_image_urls[2]['img_url'][0]}}" class = "img-fluid thumbnail">
     </div>
     <div class = "col-md-6 col-sm-12">
-      <img src= "{{mars.hemisphere_image_urls[3]['img_url'][0]}}" class = "thumbnail">
+      <img src= "{{mars.hemisphere_image_urls[3]['img_url'][0]}}" class = "img-fluid thumbnail">
     </div>
   </div>
 

@@ -34,12 +34,11 @@ def scrape():
 
     browser = init_browser()
     url = "https://space-facts.com/mars/"
-    browser.visit(url)
-    time.sleep(1)
     df_list = pd.read_html(url)
     df = df_list[0]
+    df.columns= ["", "Mars Facts"]
     table_html = df.to_html(index = False, escape = True)
-    mars_table = table_html.replace("\n", "")   
+    mars_table = table_html.replace("\n", "") 
     browser.quit() 
 
    
