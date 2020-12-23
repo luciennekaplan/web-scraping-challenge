@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mission To Mars</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel = "stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css" type= "text/css">
 </head>
 
 <body>
@@ -20,45 +21,50 @@
   <div class = "row">
     <div class = "col-md-12 col-sm-12">
       <h2>Latest Mars News</h2>
+      <hr>
       <h3>{{mars.news_title}}</h3>
       <h5>{{mars.news_p}}</h5>
     </div>
   </div>
-
+ <hr>
   <div class = "row">
     <div class = "col-md-6 col-sm-12">
       <h2>Featured Mars Image</h2>
       <img src= "{{mars.featured_image_url}}" alt="Featured Mars Image" class = "img-fluid" width = "300px" height= "auto">
     </div>
     <div class = "col-md-6 col-sm-12">
-      <table class= "table">
-      {{mars.mars_table | safe}} 
+      <table class= "table table-primary">
+      {{mars.mars_table | safe}}
       </table>
     </div>
   </div>
-
+<hr>
   <div class = "row">
     <div class = "col-md-12 col-sm-12">
       <h2>Mars Hemispheres</h2>
       <hr>
     </div>
   </div>
-  
+  <hr>
   <div class = "row">
     <div class = "col-md-6 col-sm-12">
-      <img src= "{{mars.hemisphere_image_urls[0]['img_url'][0]}}" class = "img-fluid" width = "300px" height= "auto">
+      <img src= "{{mars.hemisphere_image_urls[0]['img_url'][0]}}" class = "img-fluid" width = "400px" height= "auto">
+      <h4>Cerberus Hemisphere </h4>
     </div>
     <div class = "col-md-6 col-sm-12">
-      <img src= "{{mars.hemisphere_image_urls[1]['img_url'][0]}}" class = "img-fluid" width = "300px" height= "auto">
+      <img src= "{{mars.hemisphere_image_urls[1]['img_url'][0]}}" class = "img-fluid" width = "400px" height= "auto">
+      <h4>Schiaparelli Hemisphere</h4>
     </div>
   </div>
-
+    <hr>
   <div class = "row">
     <div class = "col-md-6 col-sm-12">
-      <img src= "{{mars.hemisphere_image_urls[2]['img_url'][0]}}" class = "img-fluid" width = "300px" height= "auto">
+      <img src= "{{mars.hemisphere_image_urls[2]['img_url'][0]}}" class = "img-fluid" width = "400px" height= "auto">
+      <h4>Syrtis Major Hemisphere </h4>
     </div>
     <div class = "col-md-6 col-sm-12">
-      <img src= "{{mars.hemisphere_image_urls[3]['img_url'][0]}}" class = "img-fluid" width = "300px" height= "auto">
+      <img src= "{{mars.hemisphere_image_urls[3]['img_url'][0]}}" class = "img-fluid" width = "400px" height= "auto">
+      <h4>Valles Marineris Hemisphere</h4>
     </div>
   </div>
 
