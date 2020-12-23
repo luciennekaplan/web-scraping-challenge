@@ -1,2 +1,2 @@
 # Web Scraping Homework - Mission to Mars
-![Screenshot](Mars Scraping Website 1.png)
+![alt text](http://https://github.com/luciennekaplan/web-scraping-challenge/blob/main/Mars%20Scraping%20Website%201.png)
