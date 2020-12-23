@@ -58,7 +58,7 @@ def scrape():
         dictionary["title"].append(title)
         dictionary["img_url"].append(img_url)
         hemisphere_image_urls.append(dictionary)
-        browser.quit()
+    browser.quit()
     mars_data = { "news_title" : news_title, "news_p" : news_p, 
     "featured_image_url" : featured_image_url, "mars_table" : mars_table, 
     "hemisphere_image_urls" : hemisphere_image_urls}
