@@ -42,15 +42,13 @@ def scrape():
     browser.quit() 
 
    
+    browser = init_browser()
     hemisphere_image_urls = []
-    urls = ["https://astrogeology.usgs.gov/search/map/Mars/Viking/cerberus_enhanced", 
-        "https://astrogeology.usgs.gov/search/map/Mars/Viking/schiaparelli_enhanced",
-        "https://astrogeology.usgs.gov/search/map/Mars/Viking/syrtis_major_enhanced",
-        "https://astrogeology.usgs.gov/search/map/Mars/Viking/valles_marineris_enhanced"]
-    for url in urls:
-        browser = init_browser()
-        url = url
+    url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
+    hemispheres = ["Cerberus", "Schiaparelli", "Syrtis Major", "Valles Marineris"]
+    for hemisphere in hemispheres:
         browser.visit(url)
+        browser.click_link_by_partial_text(hemisphere)
         time.sleep(1)
         html = browser.html
         soup = bs(html, "html.parser")
