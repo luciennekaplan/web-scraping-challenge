@@ -1,6 +1,7 @@
 # Web Scraping Homework - Mission to Mars
-<hr>
 ### In this assignment, I built a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page.
+<hr>
+
 
 
 ![Screenshot of webpage](https://github.com/luciennekaplan/web-scraping-challenge/blob/main/Mars%20Scraping%20Website%201.png)
